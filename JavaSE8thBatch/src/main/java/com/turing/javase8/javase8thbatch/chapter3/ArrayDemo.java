@@ -29,5 +29,7 @@ public class ArrayDemo {
         }
         System.out.println("Length "+ages.length);
         System.out.println("Averge age "+(total/ages.length));
+        
+        int arr[] =new int[10];
     }
 }
