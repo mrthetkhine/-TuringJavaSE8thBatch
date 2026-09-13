@@ -17,6 +17,7 @@ public class NumToText {
         System.out.println("Enter num");
         int num = scanner.nextInt();
         
+        /*
         if(num ==1)
         {
             System.out.println("One");
@@ -33,7 +34,27 @@ public class NumToText {
         {
             System.out.println("Others");
         }
+        */
+        switch(num)
+        {
+            case 1://num==1
+                System.out.println("One");
+            break;
+            case 2:
+                System.out.println("Two");
+            break;
+            case 3:
+                System.out.println("Three");
+            break;
+            case 4:
+            case 5:
+                System.out.println("Four or five");
+            break;
+            default:
                 
+                System.out.println("Others");
+            
+        }
             
         
     }
