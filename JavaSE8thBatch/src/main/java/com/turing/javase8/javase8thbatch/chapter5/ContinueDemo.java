@@ -8,19 +8,14 @@ package com.turing.javase8.javase8thbatch.chapter5;
  *
  * @author macbook
  */
-public class LabelLoop {
+public class ContinueDemo {
     public static void main(String[] args) {
-        
-        outer:for (int i = 0; i < 10; i++) {
-            System.out.println("Outer i "+i);
-            for (int j = 0; j < 20; j++) {
-                System.out.println("Inner j "+j);
-                if(j==5)
-                {
-                    break outer;
-                }
+        for (int i = 0; i < 10; i++) {
+            if(i==5)
+            {
+                continue;
             }
+            System.out.println("Hello "+i);
         }
-        System.out.println("End");
     }
 }
