@@ -10,6 +10,14 @@ package com.turing.javase8.javase8thbatch.chapter8;
  */
 class Window95
 {
+    void internalApi()
+    {
+        System.out.println("Internal Api");
+    }
+    private void privateApi()
+    {
+        System.out.println("Private Api");
+    }
     void start()
     {
         System.out.println("Start");
@@ -33,5 +41,8 @@ public class InheritanceDemo {
         win.start();
         win.screenSaver();
         win.shutdown();
+        
+        win.internalApi();
+        
     }
 }
