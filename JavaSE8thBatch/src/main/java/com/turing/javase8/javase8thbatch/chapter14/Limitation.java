@@ -4,19 +4,20 @@
  */
 package com.turing.javase8.javase8thbatch.chapter14;
 
-import java.util.Date;
-
 /**
  *
  * @author macbook
  */
-public class TypeErasure {
+class Box<T>
+{
+    T value;
+    public Box()
+    {
+        //this.value = new T();
+    }
+}
+public class Limitation {
     public static void main(String[] args) {
-        var strBox = new GenBox<>("Hello");
-        var dateBox = new GenBox<>(new Date());
         
-        System.out.println("strBox "+ (strBox instanceof GenBox<String>));
-        
-        System.out.println("dateBox "+ (dateBox instanceof GenBox<?>));
     }
 }

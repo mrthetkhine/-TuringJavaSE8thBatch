@@ -1,0 +1,33 @@
+<html>
+    <script>
+        let arr = [1,2,3,4,5];
+        let arr2 = arr.map(x=>x*2);
+
+        console.log('arr ',arr);
+        console.log('arr2 ',arr2);
+
+        function isEven(x)
+        {
+            return x%2==0;
+        }
+        let evenList = arr.filter(isEven);
+        console.log('event list ',evenList);
+
+        evenList = [];
+        for(const item of arr)
+        {
+            if(item %2 ==0)
+            {
+                evenList.push(item);
+            }
+        }
+        console.log('event list ',evenList);
+
+        function hello()
+        {
+            console.log('Hello');
+        }
+        let fun = hello;
+        fun();
+    </script>
+</html>
