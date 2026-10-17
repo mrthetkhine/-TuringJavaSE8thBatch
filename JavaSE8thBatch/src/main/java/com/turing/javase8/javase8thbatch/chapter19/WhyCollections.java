@@ -38,7 +38,7 @@ public class WhyCollections {
         System.out.println("Contains "+list.containsAll(list2));
         
         //list.removeAll(list2);
-        list.removeIf(x->x>3);
+        //list.removeIf(x->x>3);
         for(Integer i: list)
         {
             System.out.println("I=> "+i);
@@ -46,9 +46,31 @@ public class WhyCollections {
         System.out.println("Size "+list.size());
         Integer[] arr = list.toArray(new Integer[list.size()]);
         
+        
         for(Integer i: arr)
         {
             System.out.println("I=> "+i);
+        }
+        list.set(0,100);
+        list.add(0, 200);
+        for(Integer i: list)
+        {
+            System.out.println("Item => "+i);
+        }
+        
+        System.out.println("Get 0 "+list.get(0));
+        System.out.println("IndexOf 100 "+list.indexOf(100));
+        System.out.println("IndexOf 102 "+list.indexOf(102));
+        list.remove(0);
+        for(Integer i: list)
+        {
+            System.out.println("Item => "+i);
+        }
+        list.replaceAll(x->x*2);
+        System.out.println("After replaceAll");
+        for(Integer i: list)
+        {
+            System.out.println("Item => "+i);
         }
     }
 }
