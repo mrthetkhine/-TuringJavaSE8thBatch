@@ -1,0 +1,96 @@
+CREATE SCHEMA `javase_8th` DEFAULT CHARACTER SET DEFAULT ;
+
+CREATE TABLE `javase_8th`.`item` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NULL,
+  `category` VARCHAR(45) NULL,
+  `price` INT NULL,
+  `qty` INT NULL,
+  PRIMARY KEY (`id`));
+
+books
+    id,isbn,title,year,publisher_id,category
+
+CREATE TABLE `javase_8th`.`book` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `isbn` VARCHAR(255) NULL,
+  `title` VARCHAR(255) NULL,
+  `year` INT NULL,
+  `publisher_id` INT NULL,
+  `category` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`));
+
+author 
+    id,name,contact
+
+CREATE TABLE `javase_8th`.`author` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NULL,
+  `contact` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`));
+
+publisher
+    id,name,address
+
+CREATE TABLE `javase_8th`.`publisher` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NULL,
+  `address` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`));
+
+ALTER TABLE `javase_8th`.`book_author` 
+CHANGE COLUMN `id` `id` INT NOT NULL AUTO_INCREMENT ;
+
+INSERT INTO table_name(columns)
+VALUES (value_list);
+
+INSERT INTO author(name,contact)
+VALUES ('Maarten Grootendorst','Somewhere');
+
+UPDATE table_name
+SET column= value,
+column= value,
+WHERE condition;
+
+UPDATE javase_8th.author
+set contact = '2020033'
+WHERE id = 1;
+
+DELETE FROM javase_8th.publisher
+WHERE id=3;
+
+SELECT * FROM table_name;
+
+SELECT * FROM book;
+
+SELECT * FROM book
+WHERE year = 2025;
+
+SELECT * FROM book
+WHERE publisher_id = 1;
+
+SELECT * FROM book
+WHERE publisher_id = 1 AND category='AI'
+
+SELECT * FROM book
+WHERE publisher_id = 2 OR category='AI'
+
+SELECT id,isbn,title FROM book
+WHERE publisher_id = 2 OR category='AI'
+
+SELECT id,isbn,title,`year`,year(now())-year AS old
+FROM book
+WHERE year(now())-year
+
+#book older than 3 year;
+SELECT id,isbn,title,`year`,year(now())-year AS old
+FROM book
+WHERE year(now())-year >= 3
+
+SELECT * 
+FROM javase_8th.author
+ORDER By name;
+
+SELECT * 
+FROM javase_8th.author
+ORDER By name DESC;
